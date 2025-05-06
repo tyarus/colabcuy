@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cards - Join Member</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/join-member.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span>Royal Cards</span></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="buy-card.html">Buy Cards</a></li>
+                    <li><a href="join-member.html" class="active">Join Member</a></li>
+                    <li><a href="try.html">Try Cards</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Membership Section -->
+    <section class="membership-section">
+        <div class="container">
+            <h2 class="section-title">Become a Member</h2>
+            
+            <div class="membership-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" class="form-control" placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label>Choose Membership Tier</label>
+                    <div class="membership-tiers">
+                        <div class="tier" data-tier="basic">
+                            <h3>Basic</h3>
+                            <p>Access to standard cards</p>
+                            <div class="price">$9.99/mo</div>
+                        </div>
+                        
+                        <div class="tier" data-tier="premium">
+                            <h3>Premium</h3>
+                            <p>Access to all cards + discounts</p>
+                            <div class="price">$19.99/mo</div>
+                        </div>
+                        
+                        <div class="tier" data-tier="ultimate">
+                            <h3>Ultimate</h3>
+                            <p>All premium benefits + special events</p>
+                            <div class="price">$29.99/mo</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Additional Information</label>
+                    <textarea id="message" class="form-control" placeholder="Tell us about your interest in playing cards..." rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Join Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Royal Cards</div>
+                <ul class="footer-links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <div class="footer-icons">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="/img/fb.jpg" alt="Facebook"></a>
+                    <a href="https://twitter.com/" target="_blank"><img src="/img/tw.jpg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="/img/ig.jpg" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="/img/yt.jpg" alt="YouTube"></a>
+                </div>
+                <p class="copyright">© 2025 Royal Cards. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/join-member.js"></script>
+</body>
+</html>
