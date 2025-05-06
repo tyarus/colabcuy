@@ -1,0 +1,433 @@
+/* Membership Section Styles */
+.membership-section {
+    padding: 80px 0;
+    min-height: calc(100vh - 150px);
+}
+
+.membership-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(40, 42, 54, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 85, 85, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #f8f8f2;
+    font-size: 16px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 14px 16px;
+    background-color: rgba(68, 71, 90, 0.7);
+    border: 1px solid #6272a4;
+    border-radius: 8px;
+    color: #f8f8f2;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff5555;
+    box-shadow: 0 0 0 3px rgba(255, 85, 85, 0.3);
+    background-color: rgba(68, 71, 90, 0.9);
+}
+
+.form-control::placeholder {
+    color: rgba(248, 248, 242, 0.5);
+}
+
+/* Form error styles */
+.form-control.error {
+    border-color: #ff5555;
+    background-color: rgba(255, 85, 85, 0.1);
+}
+
+.error-message {
+    color: #ff5555;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+/* Membership Tiers */
+.membership-tiers {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tier {
+    background-color: rgba(68, 71, 90, 0.5);
+    border: 2px solid #6272a4;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+    min-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tier::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #6272a4;
+    transition: all 0.3s;
+}
+
+.tier:hover {
+    background-color: rgba(68, 71, 90, 0.8);
+    border-color: #ff5555;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tier:hover::before {
+    background: #ff5555;
+}
+
+.tier.selected {
+    background-color: rgba(255, 85, 85, 0.1);
+    border-color: #ff5555;
+    box-shadow: 0 10px 20px rgba(255, 85, 85, 0.2);
+}
+
+.tier.selected::before {
+    background: #ff5555;
+}
+
+.tier h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #f8f8f2;
+}
+
+.tier p {
+    font-size: 14px;
+    color: #bd93f9;
+    margin-bottom: 15px;
+    min-height: 40px;
+}
+
+.tier .price {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #ff5555;
+}
+
+.tier-features {
+    list-style: none;
+    text-align: left;
+    margin-top: 15px;
+    min-height: 100px;
+}
+
+.tier-features li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+    color: #f8f8f2;
+    font-size: 14px;
+}
+
+.tier-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #50fa7b;
+    font-weight: bold;
+}
+
+/* Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to right, #ff5555, #ff8080);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 85, 85, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #ff8080, #ff9d9d);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 85, 85, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(255, 85, 85, 0.4);
+}
+
+.submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.submit-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    20% {
+        transform: scale(25, 25);
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(40, 40);
+    }
+}
+
+/* Additional form elements */
+.checkbox-group {
+    margin-top: 15px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 2px;
+    accent-color: #ff5555;
+}
+
+.checkbox-container label {
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+/* Form steps */
+.form-steps {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    position: relative;
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -50%;
+    top: 15px;
+    width: 100%;
+    height: 2px;
+    background-color: #6272a4;
+    z-index: 1;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #6272a4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8f2;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s;
+}
+
+.step-text {
+    font-size: 14px;
+    color: #bd93f9;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.step.active .step-number {
+    background-color: #ff5555;
+    transform: scale(1.2);
+}
+
+.step.active .step-text {
+    color: #f8f8f2;
+    font-weight: bold;
+}
+
+.step.completed .step-number {
+    background-color: #50fa7b;
+}
+
+.step.active:not(:last-child)::after,
+.step.completed:not(:last-child)::after {
+    background-color: #ff5555;
+}
+
+/* Form sections (steps) */
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.btn-prev {
+    background: transparent;
+    border: 2px solid #6272a4;
+    color: #f8f8f2;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-prev:hover {
+    border-color: #ff5555;
+    color: #ff5555;
+}
+
+.btn-next {
+    background: linear-gradient(to right, #ff5555, #ff8080);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 85, 85, 0.3);
+}
+
+.btn-next:hover {
+    background: linear-gradient(to right, #ff8080, #ff9d9d);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 85, 85, 0.4);
+}
+
+/* Success message */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    background: rgba(40, 42, 54, 0.6);
+    border-radius: 15px;
+    border: 2px solid #50fa7b;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.success-message h2 {
+    color: #50fa7b;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.success-message p {
+    color: #f8f8f2;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.success-icon {
+    font-size: 60px;
+    color: #50fa7b;
+    margin-bottom: 20px;
+}
+
+.success-message .btn {
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .membership-form {
+        padding: 30px 20px;
+    }
+    
+    .membership-tiers {
+        flex-direction: column;
+    }
+    
+    .tier {
+        margin-bottom: 15px;
+    }
+    
+    .form-steps {
+        flex-wrap: wrap;
+    }
+    
+    .step {
+        width: 100px;
+        margin-bottom: 15px;
+    }
+    
+    .step:not(:last-child)::after {
+        width: 70%;
+    }
+}
